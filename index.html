@@ -252,7 +252,6 @@
             .omr-bubble { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: bold; }
         }
 
-        /* 📱 MOBILE THUMB-FRIENDLY ADJUSTMENTS */
         @media (max-width: 768px) {
             body { padding: 12px 6px; }
             .main-container { border-radius: 20px;}
@@ -260,13 +259,18 @@
             .top-bar-controls { top: 12px; padding: 0 12px; }
             header img { width: 90px; height: 90px; margin-top: 15px;}
             header h1 { font-size: 24px; }
+            
             .timer-box { font-size: 15px; height: 40px; }
             .icon-btn { width: 40px; height: 40px; }
+            
             .cheer-bubble { padding: 14px 18px; }
+            
             .avatar-grid { gap: 10px; padding: 15px 5px 25px 5px; }
             .avatar-option { font-size: 26px; padding: 10px 14px; }
+            
             .action-btns { flex-direction: column; gap: 14px; margin-top: 35px;}
             .btn { width: 100%; font-size: 16px; padding: 18px; }
+            
             .result-actions { grid-template-columns: 1fr; }
             .btn-full { grid-column: span 1; }
             .score-circle { width: 180px; height: 180px; font-size: 45px;}
@@ -317,10 +321,10 @@
             <tr>
                 <td>
                     <div class="exam-title-box">
-                        <h2 id="print-title-out">ELITE CHALLENGE - CODE: VOC-MAX-96</h2>
+                        <h2 id="print-title-out">ELITE CHALLENGE - CODE: VOC-MAX-85</h2>
                         <div class="student-info-row">
                             <div class="info-field name-field"><span class="info-label">Student Name:</span><div class="info-line" id="print-doc-student"></div></div>
-                            <div class="info-field score-field"><span class="info-label">Score:</span><div class="info-line" id="print-score-out">/ 96</div></div>
+                            <div class="info-field score-field"><span class="info-label">Score:</span><div class="info-line" id="print-score-out">/ 85</div></div>
                         </div>
                     </div>
                     
@@ -375,7 +379,7 @@
                 <img src="https://lh3.googleusercontent.com/d/1BqwA44F0BAwWMSwBnBeDIkfkNgBEtif-" alt="Mr. Ayman Kamel">
             </div>
         </div>
-        <!-- 🦅 اللوجو بالمعايير الهندسية (Hover Animation + Easter Egg + Confetti zIndex) -->
+        <!-- 🦅 اللوجو بالمعايير الهندسية ودعم الـ Easter Egg والـ Confetti العلوي -->
         <img src="https://lh3.googleusercontent.com/d/1BqwA44F0BAwWMSwBnBeDIkfkNgBEtif-" alt="Mr. Ayman Kamel Logo" onclick="triggerEasterEgg()">
         <h1>Mr. Ayman Kamel</h1>
         <p class="job-title">English Language Educator</p>
@@ -416,7 +420,7 @@
             <div class="hud-progress-wrapper">
                 <div class="hud-stats">
                     <div class="hud-student"><div class="avatar-ring" id="hud-avatar">💎</div> <span id="hud-name">--</span></div>
-                    <div class="hud-counter" id="progress-count">Q: 1 / 96</div>
+                    <div class="hud-counter" id="progress-count">Q: 1 / 85</div>
                 </div>
                 <div class="hud-bar-container">
                     <div class="hud-bar-fill" id="energy-bar"><div class="hud-avatar-runner" id="hud-moving-avatar">💎</div></div>
@@ -469,8 +473,8 @@
 
 <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxps3pkSIfSFL8rwhCNMlNCEYkeL2ooxYo_6WgWRXHHL0hcY0owu-x0qRtZei0migOyxg/exec";
-const EXAM_TITLE = "ELITE CHALLENGE - CODE: VOC-MAX-96";
-const EXAM_SCORE_TEXT = "/ 96";
+const EXAM_TITLE = "ELITE CHALLENGE - CODE: VOC-MAX-85";
+const EXAM_SCORE_TEXT = "/ 85";
 
 function tryVibrate(pattern) { if (navigator.vibrate) try { navigator.vibrate(pattern); } catch(e){} }
 
@@ -607,104 +611,93 @@ function changeFontSize(change) {
     if(newSize >= 16 && newSize <= 30) root.style.setProperty('--q-font-size', newSize + 'px');
 }
 
-/* 🔥 EXACT DATA ARRAY - 96 Vocabulary Questions (Transcribed from Images) 🔥 */
+/* 🔥 EXACT DATA ARRAY - 85 Vocabulary Questions (Transcribed from Images 1, 2, 3) 🔥 */
 const rawData = [
-    { q: "1. The computer programmer has the difficult ........ of organizing the information.", options: ["task", "profession", "position", "work"], answer: 0, rule: "Vocabulary Collocation", zatona: "تأتي كلمة difficult مع task بمعنى مهمة صعبة." },
-    { q: "2. I use my life ........ in my work.", options: ["force", "sentence", "insurance", "experience"], answer: 3, rule: "Vocabulary Context", zatona: "التعبير life experience يعني خبرة الحياة." },
-    { q: "3. He asked me so many ........ questions to which I couldn't answer.", options: ["confused", "confusing", "confusion", "confuses"], answer: 1, rule: "Adjective Endings (-ing)", zatona: "الأسئلة التي تسبب الحيرة توصف بـ confusing (مربكة/محيرة)." },
-    { q: "4. The noise outside has made me ........ so I couldn't concentrate.", options: ["confusion", "confusing", "confused", "confuse"], answer: 2, rule: "Adjective Endings (-ed)", zatona: "صفة الشخص الذي يشعر بالحيرة هي confused." },
-    { q: "5. Who will take ........ when the present manager retires?", options: ["over", "at", "off", "out"], answer: 0, rule: "Phrasal Verb", zatona: "فعل يتقلد منصباً أو يتولى مسؤولية هو take over." },
-    { q: "6. One of my qualities is that I can work under ........ .", options: ["leisure", "texture", "pressure", "treasure"], answer: 2, rule: "Collocation", zatona: "التعبير الشهير work under pressure يعني العمل تحت ضغط." },
-    { q: "7. If you want to see the doctor, you will need to make an ........ .", options: ["application", "department", "appointment", "employment"], answer: 2, rule: "Collocation", zatona: "حجز موعد مع الطبيب يقال له make an appointment." },
-    { q: "8. You should ........ your hand if you want to answer the teacher's question.", options: ["arouse", "arise", "raise", "rise"], answer: 2, rule: "Vocabulary Distinction", zatona: "فعل متعدٍ يرفع شيئاً (مثل اليد) هو raise." },
-    { q: "9. The announcement caused a lot of ........ among the students.", options: ["confuse", "confused", "confusing", "confusion"], answer: 3, rule: "Noun Form", zatona: "الاسم من confuse هو confusion (حالة ارتباك أو بلبلة)." },
-    { q: "10. Doctors must use care when ........ the vaccine to elderly people.", options: ["taking", "making", "doing", "administering"], answer: 3, rule: "Medical Vocabulary", zatona: "إعطاء أو إتقان إعطاء اللقاح أو الدواء رسمياً يقال له administer." },
-    { q: "11. By the time the ........ was raised, the robbers had escaped.", options: ["alarm", "bell", "clock", "watch"], answer: 0, rule: "Vocabulary Context", zatona: "إنذار الخطر أو السرقة هو alarm." },
-    { q: "12. My brother promised to ........ me with my project tomorrow.", options: ["resist", "insist", "assist", "persist"], answer: 2, rule: "Verb Collocation", zatona: "يساعد أو يعاون في إنجاز عمل هو assist." },
-    { q: "13. When driving, it's important to pay ........ to the road and avoid distractions.", options: ["access", "attention", "dimension", "intention"], answer: 1, rule: "Collocation", zatona: "التعبير الشهير pay attention to يعني يولي اهتماماً لـ." },
-    { q: "14. The ........ of the microwave indicated the food was ready.", options: ["sweep", "beat", "beep", "ring"], answer: 2, rule: "Sound Vocabulary", zatona: "الصوت القصير الحاد للميكروويف هو beep." },
-    { q: "15. Yesterday, the refrigerator started to ........ loudly.", options: ["move", "buzz", "shout", "yell"], answer: 1, rule: "Sound Vocabulary", zatona: "صوت الطنين المنخفض للآلات هو buzz." },
-    { q: "16. After a long ........ in teaching, he decided to retire.", options: ["career", "job", "employment", "work"], answer: 0, rule: "Vocabulary Context", zatona: "التاريخ المهني الطويل في مجال معين هو career." },
-    { q: "17. The puzzle ........ even the smartest students.", options: ["changed", "defeated", "sounded", "challenged"], answer: 3, rule: "Verb Context", zatona: "اللغز أو التحدي يختبر قدرات واختبار أذكى الطلاب يقال له challenged." },
-    { q: "18. The room was in ........ after the party.", options: ["loss", "miss", "chaos", "buzz"], answer: 2, rule: "Noun Context", zatona: "حالة الفوضى العارمة والاضطراب هي chaos." },
-    { q: "19. The sudden ........ of the old bridge caused the death of 20 people.", options: ["construction", "collapse", "establishment", "building"], answer: 1, rule: "Noun Context", zatona: "الانهيار المفاجئ للجسر هو collapse." },
-    { q: "20. When she regained ........ , she found herself in a hospital bed.", options: ["resuscitation", "conscience", "breathing", "consciousness"], answer: 3, rule: "Collocation", zatona: "استعادة الوعي يقال لها regain consciousness." },
-    { q: "21. CPR is an abbreviation of ........ Resuscitation.", options: ["Chemical", "Cardinal", "Cardiopulmonary", "Casual"], answer: 2, rule: "Medical Terminology", zatona: "اختصار CPR يعني الإنعاش القلبي الرئوي Cardiopulmonary Resuscitation." },
-    { q: "22. The fire was a / an ........ that needed quick response.", options: ["coincidence", "emergency", "deficiency", "agency"], answer: 1, rule: "Vocabulary Context", zatona: "الحالة الطارئة التي تتطلب استجابة سريعة هي emergency." },
-    { q: "23. He groaned and slapped his ........ , as if suddenly remembering something obvious.", options: ["arms", "wrist", "shoulder", "forehead"], answer: 3, rule: "Body Parts Idiom", zatona: "ضرب الجبهة (forehead) علامة تذكر شيء فجأة." },
-    { q: "24. The little boy ........ onto his mother's leg and wouldn't let go.", options: ["grabbed", "guarded", "gained", "graded"], answer: 0, rule: "Verb Context", zatona: "الإمساك بقوة وبشكل مفاجئ هو grabbed." },
-    { q: "25. The wounded man ........ in pain.", options: ["grew", "gained", "increased", "groaned"], answer: 3, rule: "Verb Context", zatona: "إصدار صوت الألم والوجع هو groaned (تأوه)." },
-    { q: "26. Her illness has not responded to ........ .", options: ["communication", "dedication", "medication", "connection"], answer: 2, rule: "Medical Collocation", zatona: "الاستجابة للعلاج الدوائي يقال لها respond to medication." },
-    { q: "27. The injured man was ........ and had to be taken to hospital.", options: ["minding", "moaning", "recovering", "relaxing"], answer: 1, rule: "Verb Context", zatona: "الأنين والتوجع من الألم هو moaning." },
-    { q: "28. Every ........ carries essential life-saving equipment.", options: ["paramedic", "diver", "nurse", "assistant"], answer: 0, rule: "Job Vocabulary", zatona: "مسعف الطوارئ الطبي هو paramedic." },
-    { q: "29. The doctor listened to my breathing and checked my ........ .", options: ["talk", "speech", "plus", "pulse"], answer: 3, rule: "Medical Collocation", zatona: "فحص النبض يقال له check my pulse." },
-    { q: "30. The doctor used a ........ to examine my stomach.", options: ["stick", "scoop", "scope", "string"], answer: 2, rule: "Medical Tool", zatona: "منظار الفحص الطبي هو scope." },
-    { q: "31. He requested a / an ........ change so he could attend his classes.", options: ["employment", "shift", "position", "period"], answer: 1, rule: "Work Vocabulary", zatona: "تغيير وردية العمل يقال له shift change." },
-    { q: "32. After the accident, he had to have 10 ........ in his head.", options: ["stitches", "bandages", "needles", "thread"], answer: 0, rule: "Medical Collocation", zatona: "غرز الجروح الجراحية هي stitches." },
-    { q: "33. She ........ the pill with a glass of water.", options: ["breathed", "digested", "chewed", "swallowed"], answer: 3, rule: "Action Vocabulary", zatona: "ابتلاع الدواء يقال له swallowed the pill." },
-    { q: "34. After the ........ were installed, the applications worked well.", options: ["screen", "software", "updates", "hardware"], answer: 2, rule: "Tech Vocabulary", zatona: "تحديثات البرامج هي software updates." },
-    { q: "35. We're going to discuss a matter of great ........ .", options: ["irrelevancy", "urgency", "decency", "frequency"], answer: 1, rule: "Collocation", zatona: "أمر بالغ الأهمية والعجالة يقال له matter of great urgency." },
-    { q: "36. The news she received was ........ , She cried a lot.", options: ["heartbreaking", "heartwarming", "joyful", "pleasing"], answer: 0, rule: "Adjective Context", zatona: "الأخبار المفجعة التي تبكي القلب هي heartbreaking." },
-    { q: "37. This novel will take you on a ........ of many different emotions from heart-breaking sadness to happiness.", options: ["roller", "roll", "poll", "roller-coaster"], answer: 3, rule: "Idiomatic Expression", zatona: "تقلبات المشاعر السريعة تشبه قطار الموت roller-coaster of emotions." },
-    { q: "38. Heart attack ........ stand a better chance if they are treated immediately.", options: ["humans", "beings", "victims", "individuals"], answer: 2, rule: "Collocation", zatona: "ضحايا الأزمات القلبية يقال لهم heart attack victims." },
-    { q: "39. A career in medicine is satisfying as well as financially ........ .", options: ["worthless", "rewarding", "valueless", "unsatisfactory"], answer: 1, rule: "Collocation", zatona: "الوظيفة المجدية ومادياً مرضية توصف بـ financially rewarding." },
-    { q: "40. While running, he suddenly felt a sharp pain in his ........ and found it difficult to breathe.", options: ["chest", "foot", "knee", "leg"], answer: 0, rule: "Body Parts/Health", zatona: "الألم الحاد في منطقة الصدر الذي يعيق التنفس يتعلق بـ chest." },
-    { q: "41. The young boy ........ his mother's hand.", options: ["stitched", "snatched", "clutched", "attached"], answer: 2, rule: "Verb Context", zatona: "الإمساك بشيء بقوة وبإحكام هو clutched." },
-    { q: "42. After walking in the pouring rain without an umbrella, we were ........ to the skin.", options: ["stuck", "soaked", "submerged", "immersed"], answer: 1, rule: "Idiomatic Collocation", zatona: "المبلل كلياً بالمطر يقال له soaked to the skin." },
-    { q: "43. His face went as ........ as a ghost when he saw the burglar in his house.", options: ["pale", "white", "black", "hollow"], answer: 1, rule: "Simile Collocation", zatona: "شاحب كالأشباح تعبير مجازي شهير هو as white as a ghost." },
-    { q: "44. She always goes the ........ mile to help her friends and family whenever they need it.", options: ["complete", "remaining", "last", "extra"], answer: 3, rule: "Idiom", zatona: "التعبير go the extra mile يعني يبذل جهداً إضافياً استثنائياً." },
-    { q: "45. I am so sorry I am late; it was raining cats and ........ and the road I normally take was closed.", options: ["mice", "rabbits", "dogs", "ducks"], answer: 2, rule: "Idiom", zatona: "المطر الغزير بغزارة تعبيره الإنجليزي raining cats and dogs." },
-    { q: "46. Firefighters need to be able to ........ into action whenever they are called.", options: ["sing", "spring", "string", "stop"], answer: 1, rule: "Idiom/Collocation", zatona: "التحرك فجأة وبسرعة للعمل هو spring into action." },
-    { q: "47. When the child fell, a young man ........ into action to help him.", options: ["jumped", "dropped", "left", "walked"], answer: 0, rule: "Collocation alternative", zatona: "التحرك السريع لإنقاذ الموقف jump into action." },
-    { q: "48. The coach always reminded the players that teamwork makes the dream ........ .", options: ["wake", "fail", "achieve", "work"], answer: 3, rule: "Common Saying", zatona: "المقولة الشهيرة teamwork makes the dream work." },
-    { q: "49. Starting a business is a lot of hard work, but no pain, no ........ .", options: ["dollar", "currency", "gain", "money"], answer: 2, rule: "Proverb", zatona: "المثل الشهير no pain, no gain (لا غُنْم بلا غُرْم)." },
-    { q: "50. The ........ of the new bridge was completed in record time.", options: ["constructively", "constructed", "construction", "constructive"], answer: 2, rule: "Noun Form", zatona: "الاسم من يبني هو construction (عملية البناء أو الإنشاء)." },
-    { q: "51. I felt completely ........ after finishing the job.", options: ["exhaust", "exhausted", "exhausting", "exhaustion"], answer: 1, rule: "Adjective Endings", zatona: "الشعور بالتعب الشديد يوصف بـ exhausted." },
-    { q: "52. The heat was unbearable, and I felt so ........ .", options: ["refreshed", "relaxed", "dizzy", "delighted"], answer: 2, rule: "Adjective Context", zatona: "الشعور بالدوخة بسبب الحرارة الشديدة هو dizzy." },
-    { q: "53. He ........ numerous cases in which the disease was spread from animals to humans.", options: ["commented", "documented", "remarked", "signaled"], answer: 1, rule: "Verb Context", zatona: "توثيق الحالات والأدلة يقال لها documented." },
-    { q: "54. This ........ shows the company's annual profits.", options: ["statistics", "charter", "shape", "chart"], answer: 3, rule: "Vocabulary Context", zatona: "الرسم البياني أو المخطط المالي هو chart." },
-    { q: "55. You need to ........ the report for errors before you submit it.", options: ["change", "type", "check", "write"], answer: 2, rule: "Collocation", zatona: "فحص ومراجعة الأخطاء يقال له check the report." },
-    { q: "56. I discussed the project with one of my ........ who made some useful suggestions.", options: ["cellmates", "operators", "guards", "colleagues"], answer: 3, rule: "Work Vocabulary", zatona: "زملاء العمل في مهنة أو مكتب هم colleagues." },
-    { q: "57. The ........ of these files will save a lot of space on your computer.", options: ["division", "operation", "compression", "pressure"], answer: 2, rule: "Tech Vocabulary", zatona: "ضغط الملفات لتوفير المساحة هو compression." },
-    { q: "58. We remember with ........ those who died defending our country.", options: ["disregard", "gratitude", "inattention", "carelessness"], answer: 1, rule: "Noun Vocabulary", zatona: "الامتنان والعرفان بالجميل هو gratitude." },
-    { q: "59. After finishing her work, she ........ for home.", options: ["led", "went", "stood", "headed"], answer: 3, rule: "Phrasal/Verb Collocation", zatona: "التوجه نحو مكان ما (المنزل) يقال له headed for home." },
-    { q: "60. The event is free and ........ off at 10 a.m.", options: ["checks", "kicks", "takes", "goes"], answer: 1, rule: "Idiomatic Phrasal", zatona: "بداية الحدث أو انطلاقته يقال لها kicks off." },
-    { q: "61. Technicians ........ the engine's performance during the test.", options: ["remember", "regard", "monitor", "memorize"], answer: 2, rule: "Verb Context", zatona: "مراقبة الأداء والقياس المستمر هو monitor." },
-    { q: "62. Taking care of a baby is a / an ........ task.", options: ["never-ending", "useless", "inessential", "insignificant"], answer: 0, rule: "Adjective Context", zatona: "المهمة المستمرة التي لا تنتهي هي never-ending task." },
-    { q: "63. In the emergency room, doctors have to ........ quick decisions to save a patient's life.", options: ["perform", "arrange", "organize", "make"], answer: 3, rule: "Collocation", zatona: "اتخاذ القرارات يقال لها make decisions." },
-    { q: "64. Everyone ........ out into the street to see what was happening.", options: ["crashed", "pushed", "rushed", "crushed"], answer: 2, rule: "Verb Context", zatona: "الاندفاع والسرعة للخروج يقال لها rushed out." },
-    { q: "65. The old man ........ when he saw smoke coming out of the engine.", options: ["panicked", "backed", "blocked", "locked"], answer: 0, rule: "Verb Context", zatona: "الشعور بالذعر الفجائي هو panicked." },
-    { q: "66. The surgical instruments must be ........ before use.", options: ["fertile", "fragile", "sterile", "immobile"], answer: 2, rule: "Medical Vocabulary", zatona: "الأدوات الجراحية يجب أن تكون معقمة sterile." },
-    { q: "67. This powerful cleaner will ........ most stains from clothes.", options: ["release", "remove", "avoid", "protect"], answer: 1, rule: "Verb Context", zatona: "إزالة البقع يقال لها remove stains." },
-    { q: "68. This job ........ a college degree and a knowledge of computers.", options: ["requires", "acquires", "inquires", "enquires"], answer: 0, rule: "Verb Context", zatona: "الوظيفة التي تستوجب أو تتطلب مؤهلاً يقال لها requires." },
-    { q: "69. The window ........ open during the storm.", options: ["threw", "jumped", "ran", "flew"], answer: 3, rule: "Idiomatic Expression", zatona: "انفتح الباب أو النوافذ فجأة بفعل الرياح يقال flew open." },
-    { q: "70. The pills should be started within the first five days after ........ begin.", options: ["signals", "symptoms", "remarks", "rest"], answer: 1, rule: "Medical Context", zatona: "بداية ظهور الأعراض المرضية يقال لها symptoms begin." },
-    { q: "71. I'm calling to ........ an appointment with Dr. Ali for my annual check-up.", options: ["make", "do", "perform", "order"], answer: 0, rule: "Collocation", zatona: "حجز موعد يقال لها make an appointment." },
-    { q: "72. While attempting to ........ his children from the fire, he tragically died.", options: ["restrict", "provide", "invite", "rescue"], answer: 3, rule: "Verb Context", zatona: "إنقاذ شخص من خطر هو rescue." },
-    { q: "73. A computer can ........ many tasks at once.", options: ["form", "make", "perform", "carry"], answer: 2, rule: "Collocation", zatona: "أداء المهام يقال لها perform tasks." },
-    { q: "74. Smokers are well aware ........ the dangers to their own health.", options: ["from", "of", "on", "at"], answer: 1, rule: "Prepositional Collocation", zatona: "على دراية بـ يقال لها aware of." },
-    { q: "75. A big fire broke ........ in a forest and all the animals started to run away.", options: ["out", "away", "in", "into"], answer: 0, rule: "Phrasal Verb", zatona: "اندلاع الحريق فجأة يقال له broke out." },
-    { q: "76. Regular exercise can ........ depression and anxiety.", options: ["increase", "enhance", "promote", "relieve"], answer: 3, rule: "Collocation", zatona: "تخفيف التوتر والقلق يقال له relieve depression and anxiety." },
-    { q: "77. The airport was buzzing ........ activity as families gathered for holiday travel.", options: ["on", "with", "by", "from"], answer: 1, rule: "Preposition Collocation", zatona: "المكان المكتظ بالحركة والنشاط يقال له buzzing with activity." },
-    { q: "78. I've never ........ fulfilled in this job, so I've finally decided to quit.", options: ["sensed", "realized", "thought", "felt"], answer: 3, rule: "Collocation", zatona: "الشعور بالرضا والتحقق المهني يقال له felt fulfilled." },
-    { q: "79. The doctor used a ........ to listen to the patient's heartbeat.", options: ["scalpel", "tube", "monitor", "stethoscope"], answer: 3, rule: "Medical Equipment", zatona: "أداة الاستماع لنبضات القلب هي السماعة الطبية stethoscope." },
-    { q: "80. In difficult moments, good people often appear to ........ hope to their communities.", options: ["rise", "get", "take", "bring"], answer: 3, rule: "Collocation", zatona: "جلب الأمل ونشره يقال له bring hope." },
-    { q: "81. It's the school's responsibility to care ........ the children during the day.", options: ["for", "on", "with", "in"], answer: 0, rule: "Preposition Collocation", zatona: "العناية بالرعاية يقال لها care for." },
-    { q: "82. You should focus ........ your studies to improve your grades.", options: ["at", "in", "on", "about"], answer: 2, rule: "Preposition Collocation", zatona: "التركيز على شيء يقال له focus on." },
-    { q: "83. The doctor informed me that I had a severe ........ cold and prescribed plenty of rest.", options: ["viral", "mild", "slight", "trivial"], answer: 0, rule: "Medical Adjective", zatona: "البرد القوي الفيروسي يقال له severe viral cold." },
-    { q: "84. To avoid muscle strain, ........ sure to warm up before lifting weights.", options: ["stay", "make", "do", "have"], answer: 1, rule: "Collocation", zatona: "التأكد من فعل الشيء يقال لها make sure." },
-    { q: "85. It took her a long time to recover ........ her illness.", options: ["on", "from", "about", "over"], answer: 1, rule: "Preposition Collocation", zatona: "التعافي من المرض يقال له recover from illness." },
-    { q: "86. People should learn to reflect ........ the importance of protecting the environment.", options: ["at", "in", "on", "with"], answer: 2, rule: "Preposition Collocation", zatona: "التأمل والتفكير العميق في أمر يقال له reflect on." },
-    { q: "87. She decided to trade her old car ........ a new model.", options: ["at", "in", "on", "for"], answer: 3, rule: "Preposition Collocation", zatona: "الاستبدال بشيء آخر يقال لها trade for." },
-    { q: "88. She wept ........ relief when the doctor said the treatment was successful.", options: ["with", "in", "on", "for"], answer: 0, rule: "Preposition Collocation", zatona: "البكاء شعوراً بالارتياح يقال له wept with relief." },
-    { q: "89. Prices continue to ........ despite government efforts.", options: ["arise", "rise", "arouse", "raise"], answer: 1, rule: "Vocabulary Distinction", zatona: "الارتفاع الذاتي للأسعار (بدون مفعول به) هو rise." },
-    { q: "90. Conflicts often ........ when communication fails.", options: ["arise", "rise", "arouse", "raise"], answer: 0, rule: "Vocabulary Distinction", zatona: "النشوء والظهور التلقائي للمشكلات هو arise." },
-    { q: "91. The charity hopes to ........ enough money for the new hospital.", options: ["arise", "rise", "arouse", "raise"], answer: 3, rule: "Vocabulary Distinction", zatona: "جمع الأموال أو التبرعات (فعل متعدٍ) هو raise." },
-    { q: "92. I attended a ........ meeting, which was very exhausting.", options: ["four-hour", "four hours", "four-hours", "four hour's"], answer: 0, rule: "Compound Adjective Rule", zatona: "الصفة المركبة التي لا تجمع إذا جاء بعدها اسم هي four-hour." },
-    { q: "93. A nurse came to his room to administer the medication. The synonym of 'administer' is ........ .", options: ["stop", "remove", "give", "avoid"], answer: 2, rule: "Synonym", zatona: "مرادف administer (يعطي دواء أو يدير) هو give." },
-    { q: "94. Snow and ice have caused chaos on the roads. The antonym of 'chaos' is ........ .", options: ["confusion", "discomfort", "disorder", "harmony"], answer: 3, rule: "Antonym", zatona: "عكس الفوضى (chaos) هو النظام والانسجام (harmony)." },
-    { q: "95. They had to finish the construction work on time. The synonym of 'construction' is ........ .", options: ["building", "demolition", "destruction", "devastation"], answer: 0, rule: "Synonym", zatona: "مرادف construction (البناء والتشييد) هو building." },
-    { q: "96. The news of her father's death was heartbreaking. The antonym of 'heartbreaking' is ........ .", options: ["uplifting", "destructive", "painful", "sorrowful"], answer: 0, rule: "Antonym", zatona: "عكس الخبر المحزن أو المفجع (heartbreaking) هو المفرح أو الرافع للروح المعنوية (uplifting)." }
+    { q: "1. My daily ........ begins when my alarm clock goes off at 6.30.", options: ["routine", "custom", "red tape", "traditions"], answer: 0, rule: "Vocabulary Collocation", zatona: "تأتي كلمة routine مع الروتين اليومي." },
+    { q: "2. The director's instructions have ........ the staff and improved their work.", options: ["charged", "given", "influenced", "associated"], answer: 2, rule: "Vocabulary Context", zatona: "التوجيهات أثرت على الموظفين (influenced)." },
+    { q: "3. She was in ........ of the company during my absence.", options: ["role", "charge", "part", "responsibility"], answer: 1, rule: "Collocation", zatona: "التعبير in charge of يعني مسؤول عن." },
+    { q: "4. It is important for people to ........ their work life from their home life.", options: ["separate", "join", "include", "mix"], answer: 0, rule: "Vocabulary Distinction", zatona: "الفصل بين العمل والحياة هو separate." },
+    { q: "5. I'm going to ........ some information about space invasion from the internet.", options: ["download", "overload", "upload", "unload"], answer: 0, rule: "Tech Vocabulary", zatona: "تحميل معلومات من الإنترنت هو download." },
+    { q: "6. Don't argue ........ him. You can't persuade him as he is stubborn.", options: ["for", "by", "with", "at"], answer: 2, rule: "Preposition Collocation", zatona: "الجدال مع شخص يقال له argue with." },
+    { q: "7. They try to solve the ........ of drugs.", options: ["theme", "operation", "point", "issue"], answer: 3, rule: "Vocabulary Context", zatona: "قضية المخدرات أو المشكلة الملحة هي issue." },
+    { q: "8. The rate at which goods are produced, and the amount produced, especially in relation to the work time and money needed to produce them is called ........ .", options: ["productivity", "priority", "brainstorming", "progress"], answer: 0, rule: "Definition Vocabulary", zatona: "معدل الإنتاج والكفاءة هو productivity." },
+    { q: "9. Energy from the sun is a form of ........ energy.", options: ["non-renewable", "renewable", "hydroelectric", "atomic"], answer: 1, rule: "Science Vocabulary", zatona: "طاقة الشمس هي طاقة متجددة renewable energy." },
+    { q: "10. Aswan is a ........ place to visit, with a wonderfully rich culture and history.", options: ["fascinating", "boring", "fearful", "depressing"], answer: 0, rule: "Adjective Context", zatona: "مكان رائع وساحر للزيارة هو fascinating." },
+    { q: "11. The ancient Egyptian ........ ended when the pharaoh died without an heir.", options: ["family", "dynasty", "household", "community"], answer: 1, rule: "History Vocabulary", zatona: "الأسرة الحاكمة أو السلالة هي dynasty." },
+    { q: "12. Researchers needed a more ........ model to understand the complex data.", options: ["sophisticated", "dedicated", "educated", "repeated"], answer: 0, rule: "Adjective Context", zatona: "نموذج متطور ومعقد هو sophisticated." },
+    { q: "13. Yesterday's meeting was to ........ the groundwork for the task ahead.", options: ["pay", "play", "betray", "lay"], answer: 3, rule: "Collocation", zatona: "إرساء الأساس يقال له lay the groundwork." },
+    { q: "14. Before the invention of the cotton ........ , separating seeds by hand was very slow.", options: ["gem", "grain", "gin", "gain"], answer: 2, rule: "History/Tech Vocabulary", zatona: "آلة فصل بذور القطن هي cotton gin." },
+    { q: "15. The discovery of DNA ........ biology and forensic science.", options: ["delayed", "hindered", "obstructed", "revolutionized"], answer: 3, rule: "Verb Context", zatona: "إحداث ثورة وتغيير جذري هو revolutionized." },
+    { q: "16. The government needs to ........ stricter laws to stop environmental pollution.", options: ["delete", "drop", "adopt", "cancel"], answer: 2, rule: "Collocation", zatona: "تبني أو إقرار قوانين صارمة هو adopt laws." },
+    { q: "17. The government launched a new green energy ........ .", options: ["initial", "initiative", "essential", "potential"], answer: 1, rule: "Noun Context", zatona: "مبادرة طاقة خضراء جديدة هي initiative." },
+    { q: "18. They formed a ........ to expand their market reach.", options: ["partnership", "citizenship", "apprenticeship", "scholarship"], answer: 0, rule: "Business Vocabulary", zatona: "تأسيس شراكة عمل هو partnership." },
+    { q: "19. More money is needed to improve the ........ of our country.", options: ["structure", "construction", "constriction", "infrastructure"], answer: 3, rule: "Vocabulary Context", zatona: "البنية التحتية للدولة هي infrastructure." },
+    { q: "20. Companies use ........ to cut labor costs and increase productivity.", options: ["observation", "operation", "automation", "organisation"], answer: 2, rule: "Business/Tech Vocabulary", zatona: "التحول الأتمتة لتقليل العمالة هو automation." },
+    { q: "21. The museum displays priceless ........ from ancient civilizations, like pottery and jewelry.", options: ["facts", "artifacts", "truths", "information"], answer: 1, rule: "History Vocabulary", zatona: "القطع الأثرية التاريخية هي artifacts." },
+    { q: "22. It is now a matter of ........ that aid reaches the people in the disaster zone.", options: ["urgency", "fluency", "frequency", "hesitancy"], answer: 0, rule: "Collocation", zatona: "مسألة ملحة وعاجلة يقال لها matter of urgency." },
+    { q: "23. If you need to delete or rename a file, right-........ its icon to bring up the menu.", options: ["stick", "block", "click", "check"], answer: 2, rule: "Tech Vocabulary", zatona: "النقر بالزر الأيمن هو right-click." },
+    { q: "24. There's a difference between online and ........ shopping experiences.", options: ["in line", "offline", "outline", "of line"], answer: 1, rule: "Tech/Business Vocabulary", zatona: "التسوق التقليدي غير المتصل بالإنترنت هو offline shopping." },
+    { q: "25. The company specializes in ........ cleaning products.", options: ["apartment", "household", "flat", "room"], answer: 1, rule: "Collocation", zatona: "منتجات التنظيف المنزلية هي household cleaning products." },
+    { q: "26. The factory was brought to a / an ........ by the workers' strike.", options: ["standstill", "start", "beginning", "final"], answer: 0, rule: "Idiomatic Collocation", zatona: "التوقف التام عن العمل يقال له brought to a standstill." },
+    { q: "27. The operating system uses computer ........ to communicate with other devices.", options: ["drivers", "divers", "folders", "files"], answer: 0, rule: "Tech Vocabulary", zatona: "برامج تشغيل الأجهزة هي drivers." },
+    { q: "28. Engineers worked to ........ the satellite's communication failure.", options: ["shoot", "transport", "transfer", "troubleshoot"], answer: 3, rule: "Tech Vocabulary", zatona: "إصلاح وعلاج أعطال الاتصالات هو troubleshoot." },
+    { q: "29. This is the new ........ of the app with added features.", options: ["revision", "review", "version", "vision"], answer: 2, rule: "Tech Vocabulary", zatona: "إصدار التطبيق الجديد هو version." },
+    { q: "30. One of our ........ will repair the machine.", options: ["dieticians", "technicians", "politicians", "physicians"], answer: 1, rule: "Job Vocabulary", zatona: "الفني المختص بإصلاح الآلات هو technician." },
+    { q: "31. The ........ connects the computer to the power source.", options: ["cable", "mouse", "printer", "keyboard"], answer: 0, rule: "Tech Vocabulary", zatona: "الكابل أو السلك هو cable." },
+    { q: "32. This software needs to be ........ .", options: ["updated", "outdated", "stated", "related"], answer: 0, rule: "Tech Vocabulary", zatona: "تحديث البرنامج هو updated." },
+    { q: "33. Energy-efficient ........ help lower your utility bills.", options: ["applications", "appliances", "instruments", "tools"], answer: 1, rule: "Household Vocabulary", zatona: "الأجهزة المنزلية الموفرة للطاقة هي appliances." },
+    { q: "34. The bank's new ........ teller machines (ATMs) offer 24/7 service.", options: ["manual", "electric", "automated", "authentic"], answer: 2, rule: "Banking Vocabulary", zatona: "ماصات الصراف الآلي الآلية هي automated teller machines." },
+    { q: "35. The children are each responsible for their own set of ........ , including taking out the trash and feeding the dog.", options: ["shifts", "homework", "works", "chores"], answer: 3, rule: "Vocabulary Context", zatona: "الأعمال المنزلية الروتينية هي chores." },
+    { q: "36. She gets through her work with speed and ........ .", options: ["deficiency", "emergency", "efficiency", "frequency"], answer: 2, rule: "Noun Context", zatona: "السرعة والكفاءة في العمل هي efficiency." },
+    { q: "37. This app helps you ........ your daily steps and calories.", options: ["trick", "tick", "deal", "track"], answer: 3, rule: "Tech Vocabulary", zatona: "تتبع الخطوات والسعرات يقال له track." },
+    { q: "38. Cleaning the polluted river was a / an ........ effort that took years to complete.", options: ["mental", "monumental", "momentary", "annual"], answer: 1, rule: "Adjective Context", zatona: "الجهد الهائل والتاريخي هو monumental effort." },
+    { q: "39. We've got the funding and the team; let's charge full steam ........ and get this software launched as soon as possible.", options: ["above", "ahead", "over", "behind"], answer: 1, rule: "Idiomatic Expression", zatona: "الانطلاق بكل قوة للأمام يقال له charge full steam ahead." },
+    { q: "40. He was a successful teacher who blended ........ ideas together.", options: ["new and modern", "bold and ancient", "old and new", "complex and complicated"], answer: 2, rule: "Vocabulary Context", zatona: "الجمع بين الأفكار القديمة والحديثة يقال له old and new." },
+    { q: "41. We add sugar to ........ the fruit for the winter.", options: ["preserve", "reserve", "serve", "deserve"], answer: 0, rule: "Vocabulary Context", zatona: "حفظ الفاكهة هو preserve." },
+    { q: "42. The new building has wheelchair ........ at every entrance to ensure easy access for all.", options: ["steps", "stairs", "lifts", "ramps"], answer: 3, rule: "Vocabulary Context", zatona: "منحدرات الكراسي المتحركة هي ramps." },
+    { q: "43. The new coach will ........ the one who retired last season.", options: ["replace", "displace", "destroy", "remove"], answer: 0, rule: "Verb Context", zatona: "يحل محل المدرب السابق هو replace." },
+    { q: "44. Banks ........ an important role in the economic development of a country.", options: ["make", "play", "act", "bring"], answer: 1, rule: "Collocation", zatona: "لعب دور مهم يقال لها play a role." },
+    { q: "45. Patients with severe respiratory issues may rely heavily ........ ventilators.", options: ["in", "at", "of", "on"], answer: 3, rule: "Preposition Collocation", zatona: "الاعتماد على يقال له rely on." },
+    { q: "46. My ........ didn't go off, so I was late for work.", options: ["fridge", "heater", "machine", "alarm clock"], answer: 3, rule: "Vocabulary Context", zatona: "المنبه الذي لم يرن هو alarm clock." },
+    { q: "47. We need to ........ the flour and sugar before adding the eggs.", options: ["blend", "mend", "attach", "fix"], answer: 0, rule: "Cooking Vocabulary", zatona: "خلط المكونات هو blend." },
+    { q: "48. We need a more efficient, ........ way to manage customer accounts.", options: ["criticized", "economized", "realized", "computerized"], answer: 3, rule: "Tech Vocabulary", zatona: "الطريقة المحوسبة هي computerized." },
+    { q: "49. After months of training, she was excited to ........ her goal of completing the marathon.", options: ["score", "replace", "achieve", "repeat"], answer: 2, rule: "Collocation", zatona: "تحقيق الهدف يقال لها achieve a goal." },
+    { q: "50. Please remain seated until the plane has ........ to a complete standstill.", options: ["come", "brought", "gone", "left"], answer: 0, rule: "Collocation", zatona: "التوقف التام يقال لها come to a standstill." },
+    { q: "51. The new manager was hired to drive the company ........ into new markets.", options: ["inward", "downward", "backward", "forward"], answer: 3, rule: "Collocation", zatona: "الدفعة للأمام يقال لها drive forward." },
+    { q: "52. The manager's charisma helped him ........ power over his employees. He was really great.", options: ["abuse", "hold", "misuse", "reuse"], answer: 1, rule: "Collocation", zatona: "إمساك الزمام والسيطرة يقال لها hold power." },
+    { q: "53. ........ conclusion, we should move forward with this plan.", options: ["In", "On", "At", "For"], answer: 0, rule: "Preposition Collocation", zatona: "في الختام يقال لها In conclusion." },
+    { q: "54. They are ........ preparations for their daughter's wedding.", options: ["bringing", "acting", "making", "doing"], answer: 2, rule: "Collocation", zatona: "عمل الترتيبات يقال لها making preparations." },
+    { q: "55. Society shapes technology, not the other way ........ .", options: ["off", "round", "about", "up"], answer: 1, rule: "Idiom", zatona: "العكس بالعكس يقال لها not the other way round." },
+    { q: "56. The soil is rich ........ nutrients which help plants to grow.", options: ["in", "of", "on", "at"], answer: 0, rule: "Preposition Collocation", zatona: "غني بـ يقال لها rich in." },
+    { q: "57. We must stay ........ the right track to complete the construction before the deadline.", options: ["in", "at", "with", "on"], answer: 3, rule: "Collocation", zatona: "البقاء على الطريق الصحيح يقال لها stay on the right track." },
+    { q: "58. They have built a security system that uses ........ intelligence.", options: ["industrial", "facial", "artificial", "unnatural"], answer: 2, rule: "Tech Vocabulary", zatona: "الذكاء الاصطناعي هو artificial intelligence." },
+    { q: "59. The potter has been studying his ........ for two decades.", options: ["profession", "operation", "position", "craft"], answer: 3, rule: "Art/Job Vocabulary", zatona: "صنعة الفخار وحرفته هي craft." },
+    { q: "60. Reading diverse texts helps to ........ your vocabulary and comprehension.", options: ["reduce", "remove", "enhance", "replace"], answer: 2, rule: "Collocation", zatona: "تحسين وتطوير الحصيلة اللغوية يقال له enhance vocabulary." },
+    { q: "61. Egypt is ........ half its food from Western countries.", options: ["importing", "exporting", "consuming", "selling"], answer: 0, rule: "Economic Vocabulary", zatona: "استيراد الطعام يقال له importing." },
+    { q: "62. Japan is a major ........ nation with a strong manufacturing base.", options: ["normal", "artificial", "natural", "industrial"], answer: 3, rule: "Economic Vocabulary", zatona: "دولة صناعية كبرى هي industrial nation." },
+    { q: "63. Our company has made many ........ in lighting technology.", options: ["activities", "innovations", "adoptions", "alterations"], answer: 1, rule: "Business Vocabulary", zatona: "الابتكارات التقنية هي innovations." },
+    { q: "64. Washing hands frequently helps ........ the spread of viruses.", options: ["minimize", "enhance", "boost", "develop"], answer: 0, rule: "Collocation", zatona: "تقليل وتقليص انتشار الفيروسات يقال له minimize the spread." },
+    { q: "65. After Tamer was fired, the boss decided to look for a / an ........ to take his position.", options: ["assignment", "appointment", "replacement", "original"], answer: 2, rule: "Vocabulary Context", zatona: "البحث عن بديل هو replacement." },
+    { q: "66. Scientists tried to connect the disease ........ a specific gene.", options: ["about", "for", "with", "on"], answer: 2, rule: "Preposition Collocation", zatona: "ربط شيء بـ يقال لها connect with." },
+    { q: "67. The printer needs to be connected ........ the computer via USB.", options: ["within", "of", "for", "to"], answer: 3, rule: "Preposition Collocation", zatona: "الاتصال بـ يقال لها connected to." },
+    { q: "68. The initial research ........ the groundwork for the entire experiment.", options: ["made", "laid", "did", "paved"], answer: 1, rule: "Collocation", zatona: "وضع الأساس يقال لها laid the groundwork." },
+    { q: "69. Living in the city offers excitement; ........ the other hand, it can be noisy and expensive.", options: ["Of", "In", "At", "On"], answer: 3, rule: "Linking Phrase", zatona: "من ناحية أخرى يقال لها On the other hand." },
+    { q: "70. After years of tireless ........ , the team finally completed the complex project.", options: ["job", "demand", "unemployment", "labour"], answer: 3, rule: "Vocabulary Context", zatona: "الجهد والعمل الشاق هو labour." },
+    { q: "71. The taps have a ........ to control the mix of hot and cold water.", options: ["liver", "cover", "lever", "mover"], answer: 2, rule: "Mechanical Vocabulary", zatona: "مقبض أو ذراع الصنبور هو lever." },
+    { q: "72. There were some ........ wires hanging out of the wall. You should be careful.", options: ["loss", "loose", "cross", "glass"], answer: 1, rule: "Adjective Context", zatona: "الأسلاك غير المثبتة أو المفكوكة هي loose wires." },
+    { q: "73. The ancient Egyptians built incredible ........ of engineering.", options: ["marvels", "motels", "hotels", "malls"], answer: 0, rule: "Vocabulary Context", zatona: "روائع وعجائب الهندسة هي marvels." },
+    { q: "74. Learning new skills helps to ........ your career potential.", options: ["economize", "minimize", "civilize", "maximize"], answer: 3, rule: "Collocation", zatona: "تعظيم الاستفادة وتطوير القدرات هو maximize." },
+    { q: "75. Babylon was considered one of the seven ........ of the ancient world.", options: ["failures", "wonders", "flaws", "defects"], answer: 1, rule: "History Vocabulary", zatona: "عجائب العالم القديم هي wonders." },
+    { q: "76. Before electricity, the ........ engine powered everything.", options: ["vapour", "steam", "water", "hybrid"], answer: 1, rule: "History/Tech Vocabulary", zatona: "محرك البخار هو steam engine." },
+    { q: "77. Security cameras have been ........ throughout the building. Now we are safe.", options: ["constructed", "disabled", "developed", "installed"], answer: 3, rule: "Tech Vocabulary", zatona: "تركيب الكاميرات هو installed." },
+    { q: "78. Modern air ........ has made global travel common.", options: ["connection", "contact", "transportation", "attachment"], answer: 2, rule: "Vocabulary Context", zatona: "الطيران والنقل الجوي هو air transportation." },
+    { q: "79. I'm taking a course in ........ marketing to grow my business.", options: ["digital", "accidental", "experimental", "mental"], answer: 0, rule: "Business/Tech Collocation", zatona: "التسويق الرقمي هو digital marketing." },
+    { q: "80. The teacher used clay to teach the children how to ........ different objects.", options: ["share", "do", "participate", "shape"], answer: 3, rule: "Verb Context", zatona: "تشكيل الأجسام الصلصال هو shape." },
+    { q: "81. He adopted a scientific approach to problem-solving. The antonym of 'adopted' is ........ .", options: ["accepted", "rejected", "embraced", "approved"], answer: 1, rule: "Antonym", zatona: "عكس تبنى أو اعتمد (adopted) هو رفض (rejected)." },
+    { q: "82. Modern appliances make housework easier. The synonym of 'appliances' is ........ .", options: ["shapes", "styles", "forms", "devices"], answer: 3, rule: "Synonym", zatona: "مرادف الأجهزة المنزلية (appliances) هو الأجهزة (devices)." },
+    { q: "83. The firm used new software to increase efficiency. The antonym of 'efficiency' is ........ .", options: ["productivity", "effectiveness", "success", "inefficiency"], answer: 3, rule: "Antonym", zatona: "عكس الكفاءة (efficiency) هو عدم الكفاءة (inefficiency)." },
+    { q: "84. I think a more sophisticated approach is needed to solve this problem. The antonym of 'sophisticated' is ........ .", options: ["simple", "complicated", "complex", "advanced"], answer: 0, rule: "Antonym", zatona: "عكس المعقد أو المتطور (sophisticated) هو البسيط (simple)." },
+    { q: "85. I had to troubleshoot my Wi-Fi for an hour. The antonym of 'troubleshoot' is ........ .", options: ["break", "fix", "solve", "hinder"], answer: 0, rule: "Antonym", zatona: "إصلاح الأخطاء (troubleshoot) يقابلها التخريب أو العطل (break) في سياق العكس الدلالي." }
 ];
 
 let typeInterval = null;
@@ -720,7 +713,7 @@ function setTimeAttack(level, el) {
 
 let quizData = [];
 let currentQuestion = 0, userAnswers = {}, studentName = "", selectedAvatar = '💎';
-let totalSeconds = 96 * 240, qTimeLeft = 15, timerInterval = null;
+let totalSeconds = 85 * 240, qTimeLeft = 15, timerInterval = null;
 let isSubmitting = false; 
 let pauseCount = 0, isPaused = false; 
 let cheatWarningsCount = 0;
@@ -1133,7 +1126,7 @@ function calculateScore() {
         try {
             let usedTime = isTimeAttack ? "Time Attack" : ( (quizData.length * 240) - totalSeconds) + "s";
             let payload = new URLSearchParams({ 
-                examName: "ELITE CHALLENGE - CODE: VOC-MAX-96", 
+                examName: "ELITE CHALLENGE - CODE: VOC-MAX-85", 
                 studentName: studentName, 
                 score: `${score} / ${quizData.length}`, 
                 percentage: percent, 
